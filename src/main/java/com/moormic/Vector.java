@@ -1,4 +1,9 @@
 package com.moormic;
 
-public class Vector {
+import lombok.Data;
+
+@Data
+class Vector {
+    private int xDir;
+    private int yDir;
 }

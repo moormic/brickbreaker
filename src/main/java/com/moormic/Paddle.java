@@ -1,4 +1,8 @@
 package com.moormic;
 
-public class Paddle {
+class Paddle extends Sprite {
+
+    private void move() {
+
+    }
 }

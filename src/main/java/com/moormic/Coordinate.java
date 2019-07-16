@@ -1,7 +1,7 @@
 package com.moormic;
 
 
-public class Coordinate {
+class Coordinate {
 
     private int x;
     private int y;

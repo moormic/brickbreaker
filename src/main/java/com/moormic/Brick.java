@@ -1,4 +1,4 @@
 package com.moormic;
 
-public class Brick {
+public class Brick extends Sprite {
 }

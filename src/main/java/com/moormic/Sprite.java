@@ -1,9 +1,8 @@
 package com.moormic;
 
-import javax.swing.*;
 import java.awt.*;
 
-public class Sprite {
+class Sprite {
 
     private Image image;
     private Coordinate coordinate;

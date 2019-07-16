@@ -1,4 +1,6 @@
 package com.moormic;
 
-public class Ball {
+class Ball extends Sprite {
+
+
 }

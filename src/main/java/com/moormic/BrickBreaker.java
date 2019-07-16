@@ -1,4 +1,11 @@
 package com.moormic;
 
-public class BrickBreaker {
+import javax.swing.*;
+
+public class BrickBreaker extends JFrame {
+
+    public static void main(String[] args) {
+
+    }
+
 }

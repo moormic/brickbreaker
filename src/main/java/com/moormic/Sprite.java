@@ -8,6 +8,6 @@ import java.awt.*;
 @Getter
 @AllArgsConstructor
 abstract class Sprite {
-    private Image image;
-    private Coordinate coordinate;
+    protected Image image;
+    protected Coordinate coordinate;
 }

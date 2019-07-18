@@ -4,6 +4,7 @@ import java.awt.*;
 
 class Ball extends Sprite {
 
+    private int size = 10;
     private Vector vector;
 
     Ball(Image image, Coordinate coordinate) {
@@ -20,6 +21,11 @@ class Ball extends Sprite {
             case RIGHT:
                 vector.invertX(); break;
         }
+    }
+
+    void move() {
+        coordinate.shiftX(vector.getXDir() * size);
+        coordinate.shiftY(vector.getYDir() * size);
     }
 
 }

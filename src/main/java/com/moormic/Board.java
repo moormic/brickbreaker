@@ -64,7 +64,9 @@ public class Board extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (gameRunning) {
             ball.move();
-            checkCollision();
+            checkWallCollision();
+            checkPaddleHit();
+            checkBrickHit();
             checkBallEscaped();
         }
         repaint();
@@ -90,7 +92,27 @@ public class Board extends JPanel implements ActionListener {
 
     }
 
-    private void checkCollision() {
+    private void checkWallCollision() {
+        // side walls
+        final int xCoord = ball.getCoordinate().getX();
+        final int yCoord = ball.getCoordinate().getY();
+
+        if (xCoord <= 0 || xCoord >= BOARD_WIDTH) {
+            ball.getVector().invertX();
+            return;
+        }
+
+        // top wall
+        if (yCoord <= 0) {
+            ball.getVector().invertY();
+        }
+    }
+
+    private void checkPaddleHit() {
+
+    }
+
+    private void checkBrickHit() {
 
     }
 

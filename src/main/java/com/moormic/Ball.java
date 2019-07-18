@@ -1,10 +1,13 @@
 package com.moormic;
 
+import lombok.Getter;
+
 import java.awt.*;
 
 class Ball extends Sprite {
 
     private int size = 10;
+    @Getter
     private Vector vector;
 
     Ball(Image image, Coordinate coordinate) {

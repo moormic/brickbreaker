@@ -1,21 +1,21 @@
 package com.moormic;
 
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-import java.awt.*;
+@Getter
+@AllArgsConstructor
+class Paddle {
 
-class Paddle extends Sprite {
+    private final int width = 100;
+    private final int height = 10;
+    private Coordinate coordinate;
 
-    @Setter
-    private Direction direction;
-
-    public Paddle(Image image, Coordinate coordinate) {
-        super(image, coordinate);
-    }
-
-
-    private void move() {
-
+    void move(Direction direction) {
+        switch (direction) {
+            case RIGHT: coordinate.shiftX(width/10); break;
+            case LEFT: coordinate.shiftX(-width/10); break;
+        }
     }
 
 }

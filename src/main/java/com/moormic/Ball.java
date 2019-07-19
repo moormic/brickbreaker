@@ -1,19 +1,15 @@
 package com.moormic;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.awt.*;
+@Getter
+@AllArgsConstructor
+class Ball {
 
-class Ball extends Sprite {
-
-    private int size = 10;
-    @Getter
+    private final int radius = 5;
+    private Coordinate coordinate;
     private Vector vector;
-
-    Ball(Image image, Coordinate coordinate) {
-        super(image, coordinate);
-        vector = new Vector(1, 1);
-    }
 
     void deflect(Direction direction) {
         switch (direction) {
@@ -27,8 +23,8 @@ class Ball extends Sprite {
     }
 
     void move() {
-        coordinate.shiftX(vector.getXDir() * size);
-        coordinate.shiftY(vector.getYDir() * size);
+        coordinate.shiftX(vector.getXDir() * radius * 2);
+        coordinate.shiftY(vector.getYDir() * radius * 2);
     }
 
 }
